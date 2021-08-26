@@ -17,13 +17,13 @@ https://www.postgresql.org/download/linux/ubuntu/
 
 Accessing the superuser postgres:
 '''
-sudo -i -u postgres
+    sudo -i -u postgres
 '''
 
 Accessing the client
 
 '''
-psql
+    psql
 '''
 
 Creating user:
