@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="utf-8">
+	<link rel="stylesheet" href="./styles.css">
+	<title>Postgres Boilerplate</title>
+</head>
+
+<body>
+  <main id="app">
+
+
+    <form id="inventory" method="post" action="">
+      
+        <% for(const item of items) { %>
+          <div>
+            <label for="name"><%= item.product %></label>
+            <input type="text" name="<%= item.product %>" id="<%= item.product %>" value="<%= item.quantity %>">
+        </div>
+        <% } %>        
+
+        
+        <input type="submit" value="Submit" id="submit">
+    </form>
+
+
+
+
+
+  </main>
+
+</body>
+
+</html>
