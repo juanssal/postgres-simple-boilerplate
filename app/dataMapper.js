@@ -4,8 +4,9 @@ exports.getAllData = (callback) => {
     client.query('SELECT * FROM inventory', callback);
 };
 
-exports.addItem = (callback) => {
-    client.query('INSERT INTO inventory VALUES ($1, $2, $3, $4)', ['bizcocho', 1, 2, '2021-02-01'], callback);
+exports.addItem = (item, callback) => {
+    //client.query('INSERT INTO inventory VALUES ($1, $2, $3, $4)', [product, 1, 2, '2021-02-01'], callback);
+    client.query("INSERT INTO inventory VALUES($1, $2, $3, $4)",[item.product, item.price, item.quantity, item.date], callback)
 };
 
 

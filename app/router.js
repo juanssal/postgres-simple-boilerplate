@@ -8,10 +8,8 @@ const router = express.Router();
 router.get('/', mainController.homePage);
 
 router.get('/add', mainController.addItemPage);
+router.get('/addPost', mainController.addItemPage);
 
-router.post('/addPost', (req, res, next) => {
-    console.log(req.body);
-    next;
-});
+router.post('/addPost',mainController.addItemPage);
 
 module.exports = router;
