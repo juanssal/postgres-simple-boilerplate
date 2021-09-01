@@ -12,6 +12,8 @@ app.set('view engine', 'ejs');
 // on lui renseigne où se situe le dossier "views" (car il n'est pas situé à la racine du projet)
 app.set('views', './app/views');
 
+app.use(express.urlencoded({extended: true}));
+
 app.use(router);
 
 app.listen(PORT, () => {

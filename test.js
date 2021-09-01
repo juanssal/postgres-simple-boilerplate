@@ -51,7 +51,7 @@ app.get('/', (req, res) => {
 
         client.end()
       });
-    
+  
     res.render('index', { testVar });
 });
 
